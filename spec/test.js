@@ -13,7 +13,7 @@ describe('Radio button demo', function() {
             .forBrowser('chrome')
             .build();
 
-        driver.get('http://localhost:4000/radio/')
+        driver.get('https://zoro.to/watch/boruto-naruto-next-generations-8143?ep=47140')
             .then(function () {
                 done();
             });

@@ -7,7 +7,7 @@
     "test": "jasmine spec/custom-rule-test.js"
   },
   "author": {
-    "name": "Aditya",
+    "name": "Marcy Sutton",
     "organization": "Deque Systems",
     "url": "http://deque.com"
   },

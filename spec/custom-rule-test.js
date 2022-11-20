@@ -18,8 +18,8 @@ describe('Selenium-aXe Tutorial', function() {
         browser = driver.build();
 
         browser.manage().timeouts().setScriptTimeout(60000);
-
-        browser.get('https://dequeuniversity.com/demo/mars/').then(function () {
+        // https://dequeuniversity.com/demo/mars/
+        browser.get('https://zoro.to/watch/boruto-naruto-next-generations-8143?ep=47140').then(function () {
             browser.executeAsyncScript(function(callback) {
                 var script = document.createElement('script');
                 script.innerHTML = 'document.documentElement.classList.add("deque-axe-is-ready");';
@@ -40,6 +40,7 @@ describe('Selenium-aXe Tutorial', function() {
         browser.quit().then(function () {
             done();
         });
+        // done();
     });
 
     it('should fetch the home page and analyze it', function (done) {
