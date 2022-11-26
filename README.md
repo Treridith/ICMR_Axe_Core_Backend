@@ -1,6 +1,6 @@
-# axe-webdriverjs demo
+# ICMR Axe Core Backend
 
-How to set up aXe with Selenium WebdriverJS and Jasmine for automated testing.
+Set up Axe Core tool by dequelabs to generate the disability score on given websites.
 
 ## Requirements
 * Node.js
@@ -17,10 +17,6 @@ Install dependencies (including Jasmine):
 ```
 npm install
 ```
-
-### Demo Project
-
-The demo tests in `spec/test.js` require eBay's Accessibility Pattern examples to be running locally at `http://localhost:4000`. You can follow along with the project by cloning the repository and setting it up on your local machine: https://github.com/ianmcburnie/mindpatterns/ 
 
 ## Usage: Run tests
 
