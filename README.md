@@ -2,6 +2,11 @@
 
 Set up Axe Core tool by dequelabs to generate the disability score on given websites.
 
+## Done by: 
+* Aditya Choudhary [2020489]
+* Raman Diwakar [2019085]
+* Sahil Patel [Outside IIITD]
+
 ## Requirements
 * Node.js
 * npm
