@@ -16,6 +16,7 @@ If you don't already have it, [download Chrome driver](https://sites.google.com/
 Install dependencies (including Jasmine):
 ```
 npm install
+npm install prompt-sync
 ```
 
 ## Usage: Run tests
