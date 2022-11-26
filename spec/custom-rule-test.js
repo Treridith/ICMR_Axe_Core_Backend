@@ -4,10 +4,16 @@ var util = require('util');
 
 var driver, browser;
 
+const prompt = require("prompt-sync")();
+
+const input = prompt("Enter website to test: ");
+
+
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 60000;
 
-var customRuleJson = require('./custom-rule.json');
-
+//var customRuleJson = require('./custom-rule.json');
+var test = 78;
+var violations;
 describe('Selenium-aXe Tutorial', function() {
 
     // Open the MarsCommuter website in the browser before each test is run
@@ -17,9 +23,9 @@ describe('Selenium-aXe Tutorial', function() {
 
         browser = driver.build();
 
-        browser.manage().timeouts().setScriptTimeout(60000);
-        // https://dequeuniversity.com/demo/mars/
-        browser.get('https://zoro.to/watch/boruto-naruto-next-generations-8143?ep=47140').then(function () {
+        //browser.manage().timeouts().setScriptTimeout(60000);
+
+        browser.get(input).then(function () {
             browser.executeAsyncScript(function(callback) {
                 var script = document.createElement('script');
                 script.innerHTML = 'document.documentElement.classList.add("deque-axe-is-ready");';
@@ -40,16 +46,17 @@ describe('Selenium-aXe Tutorial', function() {
         browser.quit().then(function () {
             done();
         });
-        // done();
     });
 
     it('should fetch the home page and analyze it', function (done) {
         browser.findElement(selenium.By.tagName('body'))
             .then(function () {
                 AxeBuilder(browser)
-                    .configure(customRuleJson)
+                    //.configure(customRuleJson)
                     .analyze(function(results) {
                         console.log('Accessibility Violations: ', results.violations.length);
+                        //console.log('Incomplete Tests: ', results.incomplete.length);
+                        violations = results.violations.length;
                         if (results.violations.length > 0 || results.incomplete.length > 0) {
                             // console.log(util.inspect(results.violations, { showHidden: true, depth: 8 }));
                             // console.log(util.inspect(results.incomplete, { showHidden: true, depth: 5 }));
@@ -57,6 +64,8 @@ describe('Selenium-aXe Tutorial', function() {
                         console.log(results);
                         // expect(results.violations.length).toBe(0);
                         // expect(results.incomplete.length).toBe(0);
+                        var percentage = ((test - violations)/test)*100;
+                        console.log("Score Percentage : ",percentage);
                         done();
                     })
             });

@@ -1,20 +1,16 @@
 {
-  "name": "axe-webdriverjs-demo",
+  "name": "ICMR-Disability-Axe-core",
   "version": "1.0.1",
-  "description": "How to set up aXe with WebdriverJS for automated testing.",
+  "description": "aXe with WebdriverJS for automated violation testing.",
   "scripts": {
     "postinstall": "jasmine init",
     "test": "jasmine spec/custom-rule-test.js"
   },
-  "author": {
-    "name": "Marcy Sutton",
-    "organization": "Deque Systems",
-    "url": "http://deque.com"
-  },
   "license": "ISC",
   "dependencies": {
-    "axe-webdriverjs": "^1.1.5",
-    "jasmine": "^2.8.0",
-    "selenium-webdriver": "^2.53.3"
+    "axe-webdriverjs": "^2.3.0",
+    "jasmine": "^4.5.0",
+    "prompt-sync": "^4.2.0",
+    "selenium-webdriver": "^4.0.0-alpha.7"
   }
 }
