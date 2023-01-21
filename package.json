@@ -9,8 +9,10 @@
   "license": "ISC",
   "dependencies": {
     "axe-webdriverjs": "^2.3.0",
-    "jasmine": "^4.5.0",
     "prompt-sync": "^4.2.0",
     "selenium-webdriver": "^4.0.0-alpha.7"
+  },
+  "devDependencies": {
+    "jasmine": "^4.5.0"
   }
 }
